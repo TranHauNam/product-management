@@ -1,0 +1,40 @@
+# Bỏ qua thư mục node_modules
+node_modules/
+
+# Bỏ qua thư mục log và các tệp log
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bỏ qua tệp môi trường (thường chứa thông tin nhạy cảm như API keys)
+.env
+
+# Bỏ qua các thư mục tạm thời của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Bỏ qua tệp lock của npm hoặc yarn
+package-lock.json
+yarn.lock
+
+# Bỏ qua các tệp liên quan đến IDE
+.idea/
+.vscode/
+
+# Bỏ qua các file build tạm thời
+dist/
+build/
+tmp/
+temp/
+
+# Bỏ qua các tệp được tạo bởi hệ thống và bộ nhớ cache
+*.swp
+*.swo
+*.bak
+
+# Bỏ qua tệp về logs và pid khi sử dụng pm2
+pids/
+*.pid
+*.seed

@@ -1,7 +1,10 @@
+//import env
+require("dotenv").config();
+
 //Khởi tạo express
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 //Route
 const route = require("./routes/client/index.route.js");
