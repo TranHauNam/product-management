@@ -10,6 +10,8 @@ const port = process.env.PORT;
 const route = require("./routes/client/index.route.js");
 route(app);
 
+//Nhúng file tĩnh
+app.use(express.static("public"));
 
 //Cấu hình pug
 app.set('view engine', 'pug');

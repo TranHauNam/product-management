@@ -1,0 +1,163 @@
+/* Tổng thể header */
+.header {
+    background-color: #f8f9fa; /* Màu nền sáng nhẹ */
+    padding: 20px 0; /* Khoảng cách trên dưới */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    position: sticky; /* Giữ header cố định khi cuộn */
+    top: 0;
+    z-index: 1000; /* Đảm bảo luôn nằm trên các thành phần khác */
+}
+
+/* Căn chỉnh container */
+.container {
+    max-width: 1200px; /* Độ rộng tối đa của container */
+    margin: 0 auto; /* Căn giữa container */
+    padding: 0 15px; /* Khoảng cách hai bên */
+}
+
+/* Căn chỉnh hàng và cột */
+/* .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* Logo */
+.inner-logo a img {
+    width: 100%; /* Đảm bảo logo không vượt quá kích thước của cột */
+    max-width: 150px; /* Đặt kích thước tối đa cho logo */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.inner-logo a:hover img {
+    transform: scale(1.1); /* Phóng to logo khi hover */
+}
+
+/* Menu */
+.inner-menu ul {
+    list-style-type: none; /* Loại bỏ dấu đầu dòng */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa các mục menu */
+}
+
+.inner-menu li {
+    position: relative;
+}
+
+.inner-menu a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: #333; /* Màu chữ đen xám */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.inner-menu a:hover {
+    color: #007bff; /* Màu xanh khi hover */
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.inner-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Màu gạch chân */
+    transition: width 0.3s ease; /* Hiệu ứng kéo dài gạch chân */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.inner-menu a:hover::after {
+    width: 100%; /* Kéo dài gạch chân khi hover */
+}
+
+/* Đáp ứng trên màn hình nhỏ */
+@media (max-width: 768px) {
+    /* .row {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+
+    .inner-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* .col-3,
+    .col-9 {
+        width: 100%;
+    } */
+
+    .inner-logo {
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Box-head */
+.box-head {
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.box-head .inner-title {
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    font-weight: bold; /* Chữ đậm */
+    color: #333; /* Màu chữ đen */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+/* Product item */
+.product-item {
+    background-color: #f8f9fa; /* Màu nền sáng cho mỗi sản phẩm */
+    border: 1px solid #ddd; /* Đường viền mỏng màu xám nhạt */
+    border-radius: 8px; /* Góc bo tròn cho khung sản phẩm */
+    padding: 15px; /* Khoảng cách bên trong khung sản phẩm */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng đổ bóng khi hover */
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng khi di chuột */
+}
+
+/* Image */
+.inner-image img {
+    max-width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của khung chứa */
+    border-radius: 5px; /* Bo tròn nhẹ cho hình ảnh */
+    margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+}
+
+/* Content */
+.inner-content {
+    text-align: center; /* Căn giữa nội dung bên trong */
+}
+
+.inner-content .inner-title {
+    font-size: 18px; /* Kích thước chữ tiêu đề sản phẩm */
+    font-weight: 600; /* Chữ hơi đậm */
+    color: #333; /* Màu chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.inner-content .inner-price {
+    font-size: 16px; /* Kích thước chữ giá */
+    font-weight: bold; /* Chữ đậm cho giá */
+    color: #e74c3c; /* Màu chữ đỏ cho giá */
+    margin-bottom: 5px; /* Khoảng cách dưới giá */
+}
+
+.inner-content .innner-discount-percentage {
+    font-size: 14px; /* Kích thước chữ cho phần trăm giảm giá */
+    color: #27ae60; /* Màu xanh lá cho phần trăm giảm giá */
+    font-weight: 500; /* Chữ vừa */
+}
+
