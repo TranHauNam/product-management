@@ -150,8 +150,19 @@
 
 .inner-content .inner-price {
     font-size: 16px; /* Kích thước chữ giá */
-    font-weight: bold; /* Chữ đậm cho giá */
+    /* font-weight: bold; Chữ đậm cho giá */
     color: #e74c3c; /* Màu chữ đỏ cho giá */
+    margin-bottom: 5px; /* Khoảng cách dưới giá */
+}
+
+.inner-price {
+    text-decoration: line-through;
+}
+
+.inner-new-price {
+    font-size: 16px; /* Kích thước chữ giá */
+    font-weight: bold; /* Chữ đậm cho giá */
+    color: blue; 
     margin-bottom: 5px; /* Khoảng cách dưới giá */
 }
 
